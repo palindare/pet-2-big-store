@@ -1,0 +1,140 @@
+@font-face {
+  font-family: Ubuntu-bold;
+  src: url("/src/fonts/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu-medium;
+  src: url("/src/fonts/Ubuntu-Medium.ttf");
+}
+
+.container_content {
+  background-color: #8424ff;
+  padding-left: 37px;
+  background-image: url("../images/top-bar-images/e0147f8.svg");
+}
+
+.container_items {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+}
+
+.darkstore_logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.darkstore_logo img {
+  width: 34px;
+}
+
+.darkstore_logo span {
+  color: white;
+  font-family: Ubuntu-bold;
+  font-size: 23px;
+}
+
+.darkstore_topbar_info {
+  display: flex;
+  margin-left: 67px;
+}
+
+.darkstore_text {
+  display: flex;
+  margin-top: 3px;
+  align-items: center;
+}
+
+.darkstore_text span {
+  color: white;
+  font-family: Ubuntu-bold;
+  font-size: 23px;
+}
+
+.darkstore_time {
+  margin: 0px 37px 0px 57px;
+}
+
+.darkstore_time {
+  transform: translate(0px, 6px);
+}
+
+.darkStore_products {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.darkStore_products img {
+  width: 60px;
+  height: 60px;
+}
+
+.product_top {
+  animation: animation-top alternate 2.5s linear infinite;
+}
+
+.product_buttom {
+  animation: animation-buttom alternate 2.5s linear infinite;
+}
+
+.darkstore_container_location {
+  display: flex;
+  align-items: center;
+}
+
+.darkStore_border {
+  display: flex;
+  gap: 15px;
+  background-color: rgb(219, 242, 39);
+  border-radius: 29px;
+  margin-left: 40px;
+  padding: 3px 23px 3px 24px;
+}
+
+.darkstore_location {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.darkstore_location span {
+  font-size: 24px;
+  font-family: Ubuntu-bold;
+}
+
+.darkstore_link {
+  background-color: black;
+  border-radius: 132px;
+  padding: 7px 20px 8px 20px;
+  margin-left: 37px;
+}
+
+.darkstore_link span {
+  color: white;
+  font-family: Ubuntu-medium;
+  font-size: 17px;
+}
+
+@keyframes animation-top {
+  0% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(-4px, 4px);
+  }
+}
+
+@keyframes animation-buttom {
+  0% {
+    transform: translate(-4px, 4px);
+  }
+  100% {
+    transform: translate(4px, -4px);
+  }
+}

@@ -1,0 +1,163 @@
+.container_conditioners {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.conditioner {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  border-radius: 5px;
+  background-color: rgb(242, 244, 247);
+}
+
+.conditioner_span {
+  display: flex;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(242, 244, 247);
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.marking_conditioners {
+  padding: 12px 15px 15px;
+}
+
+.container_img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container_img img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  object-fit: scale-down;
+  transition: transform 0.3s;
+}
+
+.container_img:hover img {
+  transform: translateY(-8px);
+}
+
+.container_bonus {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgb(255, 230, 0);
+  border-radius: 3px;
+  top: 0;
+  left: 4px;
+}
+
+.container_bonus span {
+  display: flex;
+  align-items: center;
+  padding: 1px 6px;
+  font-size: 14px;
+}
+
+.container_bonus span::after {
+  display: flex;
+  content: "";
+  margin-left: 3px;
+  width: 17px;
+  height: 12px;
+  background-image: url(/src/components/Section/images/conditioner/category_conditioner/bonus.svg);
+  background-repeat: no-repeat;
+  background-size: 17px;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container_info_items {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_name {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  font-size: 14px;
+  height: 35px;
+}
+
+.container_name:hover {
+  color: red;
+}
+
+.container_price {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.container_price::after {
+  display: flex;
+  content: "";
+  width: 20px;
+  height: 16px;
+  background-image: url(/src/components/Section/images/conditioner/category_conditioner/rub.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+
+.container_price_span {
+  display: flex;
+  align-items: center;
+  font-size: 37px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.container_price_span::after {
+  display: flex;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url(/src/components/Section/images/conditioner/category_conditioner/rub.png);
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.container_buy {
+  display: flex;
+  align-items: center;
+}
+
+.hover_items {
+  display: flex;
+  cursor: pointer;
+}
+.container_buy span {
+  font-size: 16px;
+}
+
+.container_svg svg {
+  margin-right: 5px;
+}
+
+.container_svg path {
+  fill: black;
+}
+
+.hover_items:hover span {
+  transition: color 0.5s;
+  color: red;
+}
+
+.hover_items:hover .container_svg path {
+  transition: fill 0.5s;
+  fill: red;
+}

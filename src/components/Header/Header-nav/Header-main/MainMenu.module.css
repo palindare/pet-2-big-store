@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "Ubuntu-medium";
+  src: url(/src/fonts/Ubuntu-Medium.ttf);
+}
+
+.container_main_nav {
+  padding: 12px 20px;
+}
+
+.conteiner_nav {
+  display: flex;
+  align-items: center;
+}
+
+.main_logo {
+  padding-right: 10px;
+}
+
+.main_logo img {
+  height: 40px;
+  margin-top: 2px;
+}
+
+.buttom_arrow::after {
+  display: flex;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(/src/components/Header/images/nav-images/main-menu/arrow-menu.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: 10px 6px;
+}
+
+.buttom_arrow {
+  border: 1px solid #efefef;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(253, 0, 0, 0.08);
+  margin-right: 15px;
+}
+
+.conteiner_catalog {
+  position: relative;
+  padding-right: 15px;
+}
+
+.catalog_products_btn {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid #e30613;
+  padding: 12px 21px 11px 21px;
+}
+
+
+.marking_products {
+  display: flex;
+  gap: 5px;
+  height: 20px;
+}
+
+.catalog_text span {
+  font-family: Ubuntu-medium, sans-serif;
+  font-size: 16px;
+  user-select: none;
+  color: #e30613;
+  transition: color 0.2s;
+}
+
+
+.burger_menu {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.conteiner_burgers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20px;
+  height: 20px;
+}
+
+.show_animation {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.conteiner_burgers span {
+  position: absolute;
+  background-color: #e30613;
+  transition: background-color 0.2s;
+  font-size: 16px;
+  width: 14px;
+  height: 2px;
+}
+
+.burger1 {
+  top: 4px;
+}
+
+.burger2 {
+  top: 9px;
+}
+
+.burger3 {
+  top: 14px;
+}
+
+.close_list_container span {
+  position: absolute;
+  top: 9px;
+  width: 14px;
+  height: 1.5px;
+  background-color: red;
+
+}
+
+.close_list1 {
+  transform: rotate(45deg);
+}
+
+.close_list2 {
+  transform: rotate(135deg);
+}
+
+
+.catalog_products_btn:hover {
+  background-color: #e30613;
+}
+
+.catalog_products_btn:hover .catalog_text span {
+  color: white;
+}
+
+.catalog_products_btn:hover .burger_menu span {
+  background-color: white;
+}
+
+.catalog_products_btn_active {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  padding: 12px 21px 11px 21px;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.container_search_input input {
+  height: 41px;
+  width: 730px;
+  font-size: 14px;
+  padding-inline: 17px;
+  outline: none;
+  border: 1px solid rgb(230, 229, 229);
+}
+
+.start_search_btn {
+  cursor: pointer;
+  width: 68px;
+  height: 43px;
+  border: 1px solid #e30613;
+  border-radius: 3px;
+  margin-right: 25px;
+}
+
+.start_search_btn::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/components/Header/images/nav-images/main-menu/start-search-red.svg);
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+
+
+.start_search_btn:hover {
+  background-color: #e30613;
+}
+
+.start_search_btn:hover::after {
+  background-image: url(/src/components/Header/images/nav-images/main-menu/start-search-white.svg);
+}
+
+.user_items {
+  display: flex;
+}
+
+.phone_info {
+  display: flex;
+  width: 432px;
+  flex-direction: column;
+}
+
+.phone_number {
+  height: 22px;
+  font-size: 19px;
+}
+
+.phone_number span {
+  font-family: Ubuntu-medium, sans-serif;
+}
+
+.social_network {
+  display: flex;
+  height: 17px;
+  font-size: 13px;
+  gap: 5px;
+}
+
+.social_text {
+  margin-top: 1px;
+}
+
+.social_img {
+  display: flex;
+  gap: 7px;
+}
+
+.link_1 {
+  display: flex;
+  align-items: center;
+  color: #2b5ead;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.link_1::before {
+  display: flex;
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+  background-image: url(/src/components/Header/images/nav-images/main-menu/telegram.svg);
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.link_2 {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #22a767;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.link_2::before {
+  display: flex;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+  background-image: url(/src/components/Header/images/nav-images/main-menu/whatsapp.svg);
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.link_1:hover {
+  color: #214883;
+}
+
+.link_2:hover {
+  color: #187246;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_login {
+  margin-top: 3px;
+}
+
+.user_login span {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user_login span:hover {
+  color: #e30613;
+}
+
+.user_panel {
+  display: flex;
+  font-size: 14px;
+  margin-top: 4px;
+  gap: 10px;
+}
+
+.user_panel span {
+  display: flex;
+  flex-direction: row;
+}
+
+.user_panel span::before {
+  display: flex;
+  content: "";
+  padding-right: 3px;
+  width: 16px;
+  height: 16px;
+  background-position: 0px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.item_1::before {
+  background-image: url(/src/components/Header/images/nav-images/main-menu/scales.svg);
+}
+
+.item_2::before {
+  background-image: url(/src/components/Header/images/nav-images/main-menu/heart.svg);
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+  padding-left: 19px;
+}
+
+.basket::after {
+  display: flex;
+  content: "";
+  width: 25px;
+  height: 29px;
+  background-image: url(/src/components/Header/images/nav-images/main-menu/basket.svg);
+  background-position: 0px;
+  background-repeat: no-repeat;
+  background-size: 26px;
+}
+
+.active_catalog {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 70px;
+  border: 1px solid rgb(247, 243, 243);
+  z-index: 2;
+}
+
+.catalog_list {
+  position: absolute;
+  top: 60px;
+  left: -93px;
+  background-color: white;
+  border: 1px solid rgb(247, 243, 243);
+  width: 291px;
+  height: 778px;
+  z-index: 2;
+}
+

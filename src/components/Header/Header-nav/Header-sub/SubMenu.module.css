@@ -1,0 +1,89 @@
+.header_container_menu {
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+}
+
+.border_city_link {
+    display: flex;
+    align-items: center;
+    background-color: #e30613;
+    border-radius: 0 30px 30px 0;
+    padding: 4px 13px 4px 10px;
+    margin-right: 16px;
+}
+
+.border_city_link span {
+    font-size: 13px;
+    color: white;
+}
+
+.border_city_link::before {
+    margin-right: 5px;
+    height: 11px;
+    width: 9px;
+    content: "";
+    background-image: url(/src/components/Header/images/nav-images/sub-menu/location-white.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+
+
+.border_city_link::after {
+    margin-left: 5px;
+    display: flex;
+    height: 14px;
+    width: 7px;
+    content: "";
+    background: url(/src/components/Header/images/nav-images/sub-menu/bookmark.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.menu_list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_list li {
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.menu_list li:hover {
+    color: #eb0010;
+}
+
+.bonus_text {
+    background: linear-gradient(90deg, #ea1414, #7004a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vacancies_container {
+    display: flex;
+    color: white;
+    padding: 4px 8px 3px 8px;
+    border-radius: 18px;
+    font-size: 13px;
+    background: linear-gradient(94.48deg, #e30613, #e957c9);
+}
+
+.vacancies_container::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    background-image: url(/src/components/Header/images/nav-images/sub-menu/job.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+

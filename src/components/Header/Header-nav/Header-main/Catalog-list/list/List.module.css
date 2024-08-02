@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Ubuntu-medium;
+  src: url(/src/fonts/Ubuntu-Medium.ttf);
+}
+
+.category_menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 1000px;
+  height: 200px;
+  background-color: wheat;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3,260px);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+.marking_category {
+  padding-bottom: 45px;
+  padding-left: 18px;
+  padding-right: 200px;
+  padding-top: 15px;
+}
+
+.container_items {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category_name span {
+  font-size: 17px;
+  cursor: pointer;
+  font-family: Ubuntu-medium, Ubuntu, sans-serif;
+}
+
+.category_name span:hover {
+  color: red;
+}
+
+.category_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.category_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container_lists {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
+  margin-left: 42px;
+  gap: 7px;
+}
+
+.list span {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.container_lists span:hover {
+  color: red;
+}

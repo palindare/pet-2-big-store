@@ -1,0 +1,40 @@
+.marking {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.category_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main_text {
+  font-size: 37px;
+  font-weight: bold;
+}
+
+.all_goods_btn {
+  display: flex;
+  font-size: 15px;
+  color: #085eb1;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.all_goods_btn::after {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 9px;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background-image: url(/src/components/Section/images/conditioner/category_conditioner/arrow.svg);
+  background-repeat: no-repeat;
+}
+
+.all_goods_btn:hover {
+  opacity: 0.7;
+}

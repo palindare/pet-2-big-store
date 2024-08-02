@@ -1,0 +1,228 @@
+.container_footer {
+  padding: 21px 30px 27px;
+}
+
+.company_info {
+  list-style-type: none;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.container_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company_info p {
+  display: inline-block;
+  padding-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 0px 0px 9px 0px;
+  padding: 0;
+}
+
+.company_info p:hover {
+  color: red;
+}
+
+#title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: auto;
+}
+
+#title:hover {
+  color: black;
+}
+
+.container_info {
+  display: flex;
+}
+
+.info {
+  display: flex;
+}
+
+.container_links {
+  width: 300px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app_store {
+  display: flex;
+  font-size: 17px;
+  height: 32px;
+  font-weight: bold;
+}
+
+.app_store::before {
+  display: flex;
+  content: "";
+  margin-right: 9px;
+  width: 24px;
+  height: 22px;
+  background-image: url(./images/app-store.png);
+  background-repeat: no-repeat;
+}
+
+.app_store span {
+  cursor: pointer;
+}
+
+.app_store span:hover {
+  color: red;
+}
+
+.play_market {
+  display: flex;
+  height: 32px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.play_market::before {
+  display: flex;
+  content: "";
+  margin-right: 9px;
+  width: 24px;
+  height: 22px;
+  background-image: url(./images/google-play.png);
+  background-repeat: no-repeat;
+}
+
+.play_market span {
+  cursor: pointer;
+}
+
+.play_market span:hover {
+  color: red;
+}
+
+.vkontakte {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.vkontakte::before {
+  display: flex;
+  content: "";
+  margin-right: 4px;
+  display: flex;
+  width: 20px;
+  height: 13px;
+  background-image: url(./images/vk.svg);
+  background-repeat: no-repeat;
+}
+
+.subscribe {
+  font-size: 13px;
+  margin-left: 3px;
+  opacity: 0.7;
+}
+
+.vkontakte p {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.vkontakte p:hover {
+  color: red;
+}
+
+.youtube {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.youtube::before {
+  display: flex;
+  content: "";
+  margin-right: 4px;
+  display: flex;
+  width: 20px;
+  height: 16px;
+  background-image: url(./images/YouTube.svg);
+  background-repeat: no-repeat;
+}
+
+.youtube p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.youtube p:hover {
+  color: red;
+}
+
+.link_mail {
+  display: flex;
+}
+
+.link_social_network {
+  width: 307px;
+}
+
+.link_mail {
+  width: 307px;
+}
+
+.contact_05 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact_05 p {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact_05 p:hover {
+  color: red;
+}
+
+.container_main_text {
+  position: relative;
+  right: 13px;
+  padding-left: 13px;
+  background-image: url(/src/components/Footer/images/background.png);
+}
+
+#main_text {
+  height: 100%;
+  font-size: 13px;
+  font-weight: normal;
+  background-position: -10px;
+}
+
+.politic {
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
+.politic p {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  opacity: 0.7;
+}

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: Ubuntu-medium;
+  src: url(/src/fonts/Ubuntu-Medium.ttf);
+}
+
+.category_conditioner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.category {
+  overflow: hidden;
+  cursor: pointer;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(242, 244, 247);
+}
+
+.name_category {
+  font-family: Ubuntu-medium;
+  padding: 15px 15px 0;
+  font-size: 19px;
+  transition: opacity 0.25s ease-out;
+}
+
+.name_category:hover {
+  opacity: 0.6;
+}
+
+.container_img {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 115px;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(12px);
+  mix-blend-mode: multiply;
+  height: 115px;
+  width: 160px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.category:hover .img {
+  transform: translate(3px, -6px);
+}
