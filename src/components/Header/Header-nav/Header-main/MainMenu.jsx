@@ -1,15 +1,24 @@
 import styles from "./MainMenu.module.css";
 import logo_img from "../../images/nav-images/main-menu/main-logo.png";
 import CatalogList from "./Catalog-list/CatalogList";
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import BasketMenu from "./Basket-menu/BasketMenu";
+import { useState, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 function MainMenu() {
-  const [showCatalog, setShowCatalog] = useState(false);
-  const state = useSelector((state) => state.catalogList.catalogList);
+  const state = useSelector((state) => state.showBurger.showBurgerMenu);
+  const dispatch = useDispatch();
 
   const showListCatalog = () => {
-    !showCatalog ? setShowCatalog(true) : setShowCatalog(false);
+    !state
+      ? dispatch({ type: "SETMENU", payload: true })
+      : dispatch({ type: "SETMENU", payload: false });
+  };
+
+  const hideListCatalog = () => {
+    if (state) {
+      dispatch({ type: "SETMENU", payload: false });
+    }
   };
 
 
@@ -27,14 +36,18 @@ function MainMenu() {
               onClick={() => showListCatalog()}
             >
               <div
+                onClick={() => hideListCatalog()}
+                className={styles.close_catalogList}
+              ></div>
+              <div
                 className={
-                  showCatalog
+                  state
                     ? styles.catalog_products_btn_active
                     : styles.catalog_products_btn
                 }
               >
                 <div
-                  style={{ display: showCatalog ? "block" : "none" }}
+                  style={{ display: state ? "block" : "none" }}
                   className={styles.active_catalog}
                 ></div>
                 <div className={styles.marking_products}>
@@ -42,21 +55,17 @@ function MainMenu() {
                     <div className={styles.close_list_container}>
                       <span
                         style={{
-                          transition: showCatalog ? "all 0.2s" : "none",
-                          opacity: showCatalog ? "1" : "0",
-                          transform: `rotate(${
-                            showCatalog ? "45deg" : "15deg"
-                          })`,
+                          transition: state ? "all 0.2s" : "none",
+                          opacity: state ? "1" : "0",
+                          transform: `rotate(${state ? "45deg" : "15deg"})`,
                         }}
                         className={styles.close_list1}
                       ></span>
                       <span
                         style={{
-                          transition: showCatalog ? "all 0.2s" : "none",
-                          opacity: showCatalog ? "1" : "0",
-                          transform: `rotate(${
-                            showCatalog ? "135deg" : "165deg"
-                          })`,
+                          transition: state ? "all 0.2s" : "none",
+                          opacity: state ? "1" : "0",
+                          transform: `rotate(${state ? "135deg" : "165deg"})`,
                         }}
                         className={styles.close_list2}
                       ></span>
@@ -65,24 +74,24 @@ function MainMenu() {
                       <div className={styles.show_animation}>
                         <span
                           style={{
-                            top: showCatalog ? "9px" : "4px",
-                            transition: showCatalog ? "none" : "all 0.2s ",
-                            opacity: showCatalog ? "0" : "1",
+                            top: state ? "9px" : "4px",
+                            transition: state ? "none" : "all 0.2s ",
+                            opacity: state ? "0" : "1",
                           }}
                           className={styles.burger1}
                         ></span>
                         <span
                           style={{
-                            transition: showCatalog ? "none" : "all 0.2s ",
-                            opacity: showCatalog ? "0" : "1",
+                            transition: state ? "none" : "all 0.2s ",
+                            opacity: state ? "0" : "1",
                           }}
                           className={styles.burger2}
                         ></span>
                         <span
                           style={{
-                            top: showCatalog ? "9px" : "14px",
-                            transition: showCatalog ? "none" : "all 0.2s ",
-                            opacity: showCatalog ? "0" : "1",
+                            top: state ? "9px" : "14px",
+                            transition: state ? "none" : "all 0.2s ",
+                            opacity: state ? "0" : "1",
                           }}
                           className={styles.burger3}
                         ></span>
@@ -96,17 +105,23 @@ function MainMenu() {
               </div>
             </div>
             <div
-              style={{ display: showCatalog ? "block" : "none" }}
+              style={{ display: state ? "block" : "none" }}
               className={styles.catalog_list}
             >
               <CatalogList />
             </div>
           </div>
-          <div className={styles.container_search_input}>
+          <div
+            onClick={() => hideListCatalog()}
+            className={styles.container_search_input}
+          >
             <input type="text" placeholder="Быстрый поиск в Махачкале" />
           </div>
-          <div className={styles.start_search_btn}></div>
-          <div className={styles.user_items}>
+          <div
+            onClick={() => hideListCatalog()}
+            className={styles.start_search_btn}
+          ></div>
+          <div onClick={() => hideListCatalog()} className={styles.user_items}>
             <div className={styles.phone_info}>
               <div className={styles.phone_number}>
                 <span>8 (800) 511-05-05</span>
@@ -130,7 +145,7 @@ function MainMenu() {
                 <span className={styles.item_2}>Избранное</span>
               </div>
             </div>
-            <div className={styles.basket}></div>
+            <BasketMenu/>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import styles from "./CatalogList.module.css";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import List from "./list/List";
+import List from "./List/List";
 
 function CatalogList() {
   const state = useSelector((state) => state.catalogList.catalogList);
@@ -11,22 +11,15 @@ function CatalogList() {
     setNewId(currentId);
   };
 
-  const currentList = () => {
-    const result = state.filter(({id}) => newId === id)
-    return result
-  }
-
-  currentList()
-
   return (
     <>
       <div className={styles.main_list}>
         <div className={styles.marking_list}>
-          {state.map(({ img, name, id }, index) => {
+          {state.map(({ img, name, id }) => {
             return (
               <div
+                key={`${id}-${img}`}
                 onMouseOver={() => setActiveTab(id)}
-                key={index}
                 className={styles.container_category}
               >
                 <div
@@ -48,7 +41,7 @@ function CatalogList() {
           })}
         </div>
         <div className={styles.container_list}>
-          <List currentList={currentList()} />
+          <List currentId={newId} />
         </div>
       </div>
     </>

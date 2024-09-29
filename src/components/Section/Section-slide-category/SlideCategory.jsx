@@ -1,9 +1,9 @@
 import styles from "./SlideCategory.module.css";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import fronchise_img from "../images/slide-category/franchise.svg";
 import icon05_img from "../images/slide-category/05.ru.jpg";
 import { useInView } from "react-intersection-observer";
+import { useSelector,useDispatch } from "react-redux";
 
 
 function SlideCategory() {
@@ -26,6 +26,14 @@ function SlideCategory() {
     slider: icon05_img,
     advertising: true,
   };
+
+  const stateShow = useSelector((state) => state.showBurger.showBurgerMenu);
+  const dispatch = useDispatch();
+  const hideListCatalog = () => {
+    if (stateShow) {
+      dispatch({ type: "SETMENU", payload: false });
+    }
+  }
 
 
   changedState.splice(1, 0, franchiseObject);
@@ -80,7 +88,7 @@ function SlideCategory() {
 
   return (
     <>
-      <div onMouseUp={() => mouseUpSlide()} className={styles.marking_down}>
+      <div onClick={() => hideListCatalog()} onMouseUp={() => mouseUpSlide()} className={styles.marking_down}>
         <div className={styles.marking}>
           <div className={styles.container_btn}>
             <div

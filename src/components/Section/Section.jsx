@@ -8,12 +8,11 @@ import Conditioner from "./Section_conditioner/Conditioner";
 function Section() {
   return (
     <>
-      <Slider />
-      <AuthInfo />
-      <Category />
-      <SlideCategory />
-      <Conditioner />
-      
+      <Slider/>
+      <AuthInfo/>
+      <Category/>
+      <SlideCategory/>
+      <Conditioner/>
     </>
   );
 }

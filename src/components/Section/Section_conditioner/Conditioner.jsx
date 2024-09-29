@@ -3,6 +3,7 @@ import CategoryConditioner from "./category_conditioner/CategoryConditioner";
 import RecomendedConditioners from "./recommended-conditioners/RecommendedСonditioners";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { useSelector,useDispatch } from "react-redux";
 
 function Conditioner() {
   const [ref, inViev] = useInView({ threshold: 0.5 });
@@ -13,11 +14,18 @@ function Conditioner() {
       setShowGoods(true);
     }
   }, [inViev]);
-
+  
+  const state = useSelector((state) => state.showBurger.showBurgerMenu);
+  const dispatch = useDispatch();
+  const hideListCatalog = () => {
+    if (state) {
+      dispatch({ type: "SETMENU", payload: false });
+    }
+  }
 
   return (
     <>
-      <div className={styles.marking}>
+      <div onClick={() => hideListCatalog()} className={styles.marking}>
         <div className={styles.container_conditioner}>
           <div
             ref={ref}

@@ -1,0 +1,182 @@
+.basket_menu {
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  right: 0px;
+  width: 350px;
+  border-radius: 5px;
+  transform: translate(20px, 50px);
+  background-color: white;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+.basket_container {
+  padding: 12px 10px 13px;
+}
+
+.container_info {
+  display: flex;
+}
+
+.marking_info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.container_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+}
+
+.container_img img {
+  max-width: 58px;
+  max-height: 53px;
+}
+
+.container_items {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.container_text {
+    width: 237px;
+    cursor: pointer;
+}
+
+.container_text span {
+  font-size: 14px;
+}
+
+.container_text:hover span {
+  color: red;
+}
+
+.container_svg img {
+  cursor: pointer;
+}
+
+.trash_img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  transform: translateY(-2px);
+  background-image: url("../../../../images/nav-images/main-menu/basket-img/trash-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.trash_img:hover {
+  background-image: url("../../../../images/nav-images/main-menu/basket-img/trash-red.svg");
+}
+
+.container_price {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.container_price span {
+  display: flex;
+  align-items: center;
+}
+
+.container_price span::after {
+  display: flex;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("../../../../images/nav-images/main-menu/basket-img/rub.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+
+.container_calc {
+  display: flex;
+  padding-top: 9px;
+}
+
+.quantity_info {
+  display: flex;
+  gap: 3px;
+}
+
+.minus {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: white;
+}
+
+.minus::before {
+  display: flex;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../../../../images/nav-images/main-menu/basket-img/minus-black.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.minus:hover::before {
+    background-image: url("../../../../images/nav-images/main-menu/basket-img/minus-red.svg");
+}
+
+.plus {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: white;
+}
+
+.plus::after {
+  display: flex;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../../../../images/nav-images/main-menu/basket-img/plus-black.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.plus:hover::after {
+    background-image: url("../../../../images/nav-images/main-menu/basket-img/plus-red.svg");
+}
+
+.unit_measurement_text {
+  align-items: center;
+  padding: 2px 0 0 3px;
+  font-size: 12px;
+  color: #898989;
+}
+
+.buy_container {
+  padding: 10px;
+}
+
+.buy_btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #e30613;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  height: 39px;
+}
+
+.buy_btn:hover {
+    background-color: #ff0008;
+    transition: background-color 0.2s ease-out;
+}
+

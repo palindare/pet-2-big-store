@@ -7,12 +7,21 @@ import conditioner_img from "../images/category-tabs/air-conditioner.webp";
 import wahing_img from "../images/category-tabs/washing-machine.webp";
 import TV_img from "../images/category-tabs/Television.webp";
 import book_img from "../images/category-tabs/book.webp"
+import { useSelector,useDispatch } from "react-redux";
 
 
 function Category() {
+  const state = useSelector((state) => state.showBurger.showBurgerMenu);
+  const dispatch = useDispatch();
+  const hideListCatalog = () => {
+    if (state) {
+      dispatch({ type: "SETMENU", payload: false });
+    }
+  }
   return (
     <>
-      <div className={styles.container_tabs_category}>
+    <div onClick={() => hideListCatalog()}>
+      <div  className={styles.container_tabs_category}>
         <div className={styles.marking_grid}>
           <div className={styles.main_tab}>
             <div className={styles.category_container}>
@@ -128,6 +137,7 @@ function Category() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }

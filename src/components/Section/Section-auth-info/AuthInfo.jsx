@@ -5,10 +5,19 @@ import time_img from "../images/darkstore-banner/time.svg";
 import grape_img from "../images/darkstore-banner/grape.png";
 import cheese_img from "../images/darkstore-banner/cheese.png";
 import milk_img from "../images/darkstore-banner/milk.png";
+import { useSelector,useDispatch } from "react-redux";
 
 function AuthInfo() {
+  const state = useSelector((state) => state.showBurger.showBurgerMenu);
+  const dispatch = useDispatch();
+  const hideListCatalog = () => {
+    if (state) {
+      dispatch({ type: "SETMENU", payload: false });
+    }
+  }
   return (
     <>
+    <div onClick={() => hideListCatalog()} >
       <div className={styles.marking}>
         <div className={styles.container_info}>
           <div className={styles.container_info_auth}>
@@ -56,6 +65,7 @@ function AuthInfo() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }

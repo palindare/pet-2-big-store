@@ -1,6 +1,6 @@
 import styles from "./Slider.module.css";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 function Slider() {
   const state = useSelector((state) => state.slides.slides);
@@ -120,9 +120,18 @@ function Slider() {
     setMoveX(0);
   };
 
+  const stateShow = useSelector((state) => state.showBurger.showBurgerMenu);
+  const dispatch = useDispatch();
+  const hideListCatalog = () => {
+    if (stateShow) {
+      dispatch({ type: "SETMENU", payload: false });
+    }
+  }
+
+
   return (
     <>
-      <div className={styles.main_slider}>
+      <div onClick={() => hideListCatalog()} className={styles.main_slider}>
         <div onMouseUp={() => onSlideUp()} className={styles.marking}>
           <div
             className={styles.next_slide_btn}

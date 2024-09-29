@@ -1,0 +1,19 @@
+.basket {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 19px;
+}
+
+.basket::after {
+  display: flex;
+  content: "";
+  cursor: pointer;
+  width: 25px;
+  height: 29px;
+  background-image: url("../../../images/nav-images/main-menu/basket.svg");
+  background-position: 0px;
+  background-repeat: no-repeat;
+  background-size: 26px;
+}
+

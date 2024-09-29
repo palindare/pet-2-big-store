@@ -1,15 +1,16 @@
 import styles from "./App.module.css";
-import Header from "./Header/Header";
-import Section from "./Section/Section";
-import Footer from "./Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import Main from "./Main";
+
 function App() {
-    return (
+  return (
     <>
-        <Header/>
-        <Section/>
-        <Footer/>
+  <Routes>
+    <Route path="/" element={<Main/>}/>
+    <Route path="/basket" element={<><p>top</p></>}/>
+  </Routes>
     </>
-    )
+  );
 }
 
 export default App;
