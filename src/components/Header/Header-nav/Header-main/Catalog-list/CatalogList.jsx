@@ -1,7 +1,7 @@
 import styles from "./CatalogList.module.css";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import List from "./List/List";
+import List from "./list/List"
 
 function CatalogList() {
   const state = useSelector((state) => state.catalogList.catalogList);

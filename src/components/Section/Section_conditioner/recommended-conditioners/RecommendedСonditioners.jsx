@@ -10,7 +10,7 @@ function RecommendedСonditioners() {
     dispatch({type:"ADD_MENU_BASKET", payload: data})
   };
 
-  console.log(stateBasket)
+  // console.log(stateBasket)
 
   return (
     <>

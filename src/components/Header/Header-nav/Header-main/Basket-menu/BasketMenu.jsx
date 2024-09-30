@@ -24,6 +24,8 @@ function BasketMenu() {
     }, 300);
   };
 
+  console.log(state)
+
   
   return (
     <>

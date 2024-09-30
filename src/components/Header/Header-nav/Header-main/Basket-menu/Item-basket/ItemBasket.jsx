@@ -1,21 +1,29 @@
 import styles from "./ItemBasket.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 function ItemBasket({ showBasket, transitBasket }) {
   const state = useSelector((state) => state.menuBasket.menuBasket);
+  const dispatch = useDispatch();
   let resultSum;
   let sum = 0;
 
   useEffect(() => {
-    if (state.some(data => !data.quantity) || state.some(data => data.quantity < 2)) {
-      state.forEach(data => data.quantity = 1)
-    }
+    state.forEach(data => !data.quantity ? data.quantity = 1 : data)
   }, [state])
 
-  const plusHandler = (currentid) => {
-    const currentState = state.find(({id}) => id  == currentid)
-    currentState.quantity += 1
+  const plusHandler = (currentId) => {
+    dispatch({type: "CALC_PLUS", payload: currentId})
+  }
+
+  const minusHandler = (currentId) => {
+    const currentArr = state.find(data => data.id === currentId);
+    if (currentArr.quantity === 1) {
+      const changeArr = state.filter(data => data.id !== currentId);
+      dispatch({type: "REMOVE_DATA", payload: changeArr})
+    } else {
+      dispatch({type: "CALC_MINUS", payload: currentId})
+    }
   }
 
   return (
@@ -28,6 +36,7 @@ function ItemBasket({ showBasket, transitBasket }) {
         }}
       >
         {state.map(({ id, name, img, price, quantity }) => {
+          if (!price) return
           let changedPrice = price.replace(" ", "");
           sum += +changedPrice;
           resultSum = new Intl.NumberFormat("Ru-ru", {
@@ -57,7 +66,7 @@ function ItemBasket({ showBasket, transitBasket }) {
                     </div>
                     <div className={styles.container_calc}>
                       <div className={styles.quantity_info}>
-                        <button onClick={() =>  plusHandler(id)}className={styles.minus}></button>
+                        <button onClick={() =>  minusHandler(id)}className={styles.minus}></button>
                         <div style={{fontSize: "14px"}}>{quantity}</div>
                         <button onClick={() => plusHandler(id)} className={styles.plus}></button>
                       </div>
