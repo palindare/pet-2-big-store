@@ -1,8 +1,8 @@
 .basket_menu {
     position: absolute;
     overflow: hidden;
-    top: 0px;
-    right: 0px;
+    top: 95px;
+    right: 20px;
     width: 350px;
     border-radius: 5px;
     transform: translate(20px, 50px);

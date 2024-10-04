@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 function Slider() {
   const state = useSelector((state) => state.slides.slides);
+  const [loadSlide, setLoadSlide] = useState(0);
   const [slider, setSlider] = useState([
     state[state.length - 3],
     state[state.length - 2],
@@ -78,10 +79,6 @@ function Slider() {
 
   let currentSlide;
 
-  // current === state.length + 3
-  //   ? (currentSlide = slider.find(({ id }) => 1 === +id))
-  //   : (currentSlide = slider.find(({ id }) => current - 2 === +id));
-
   if (current === state.length + 3) {
     currentSlide = slider.find(({ id }) => 1 === +id);
   } else if (current === 2) {
@@ -127,6 +124,12 @@ function Slider() {
       dispatch({ type: "SETMENU", payload: false });
     }
   }
+  
+  const showSlider = () => {
+    setLoadSlide(num => num + 1)
+    setTransitionOn(true)
+  }
+
 
 
   return (
@@ -152,9 +155,11 @@ function Slider() {
           >
             <div
               onTransitionEnd={() => transitionEnd()}
+              onLoad={() => showSlider()}  
               style={{
                 transform: `translateX(${moveX}px)`,
-                transition: transitionOn ? "transform 0.3s" : "none",
+                transition: transitionOn ? "all 0.3s" : "none",
+                opacity: loadSlide === slider.length ? 1 : 0
               }}
               className={styles.slides}
             >

@@ -1,6 +1,7 @@
 import styles from "./ItemBasket.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ItemBasket({ showBasket, transitBasket }) {
   const state = useSelector((state) => state.menuBasket.menuBasket);
@@ -25,6 +26,12 @@ function ItemBasket({ showBasket, transitBasket }) {
       dispatch({type: "CALC_MINUS", payload: currentId})
     }
   }
+
+  const removeCurrentArr = (currentId) => {
+    const changeArr = state.filter(data => data.id !== currentId);
+    dispatch({type: "REMOVE_DATA", payload: changeArr})
+  }
+
 
   return (
     <>
@@ -58,7 +65,7 @@ function ItemBasket({ showBasket, transitBasket }) {
                         <span>{name}</span>
                       </div>
                       <div className={styles.container_svg}>
-                        <div className={styles.trash_img}></div>
+                        <div onClick={() => removeCurrentArr(id)} className={styles.trash_img}></div>
                       </div>
                     </div>
                     <div className={styles.container_price}>
@@ -79,9 +86,11 @@ function ItemBasket({ showBasket, transitBasket }) {
           );
         })}
         <div className={styles.buy_container}>
+          <Link to="/basket">
           <button className={styles.buy_btn}>
             В корзину, товаров на {resultSum}
           </button>
+          </Link>
         </div>
       </div>
     </>

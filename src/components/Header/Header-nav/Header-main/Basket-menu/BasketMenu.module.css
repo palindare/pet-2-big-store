@@ -1,4 +1,10 @@
+.container_basket {
+  display: flex;
+  align-items: center;
+}
+
 .basket {
+  position: relative;
   display: flex;
   position: relative;
   align-items: center;
@@ -17,3 +23,17 @@
   background-size: 26px;
 }
 
+.quantity_goods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-image: url("../../../images/nav-images/main-menu/basket-img/round.svg");
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
+  top: 1px;
+  right: -4px;
+}

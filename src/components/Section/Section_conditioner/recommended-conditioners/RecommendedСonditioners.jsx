@@ -5,12 +5,16 @@ function RecommendedСonditioners() {
   const state = useSelector((state) => state.slides.slideConditioners);
   const stateBasket = useSelector((state) => state.menuBasket.menuBasket);
   const dispatch = useDispatch();
+
   const addMenuBasket = (currentId) => {
-    const data = state.find(({ id }) => id === currentId);
-    dispatch({type:"ADD_MENU_BASKET", payload: data})
+    if (!stateBasket.find(data => data.id === currentId)) {
+      const data = state.find(({ id }) => id === currentId);
+      dispatch({type:"ADD_MENU_BASKET", payload: data})
+    } else {
+      dispatch({type:"DELETE_MENU_BASKET", payload: currentId})
+    }
   };
 
-  // console.log(stateBasket)
 
   return (
     <>
@@ -47,7 +51,7 @@ function RecommendedСonditioners() {
                     </div>
                     <div className={styles.container_buy}>
                       <div className={styles.hover_items}>
-                        <div className={styles.container_svg}>
+                        <div className={stateBasket.find(data => data.id === id) ? styles.container_svg_add : styles.container_svg}>
                           <svg
                             width="14"
                             height="15"

@@ -148,8 +148,37 @@
   margin-right: 5px;
 }
 
-.container_svg path {
+.container_svg, path {
   fill: black;
+}
+
+.container_svg_add {
+  position: relative;
+}
+
+.container_svg_add svg {
+  margin-right: 5px;
+}
+
+.container_svg_add path{
+  fill: black;
+}
+
+.container_svg_add::after {
+  position: absolute;
+  top: -5px;
+  right: -0px;
+  display: block;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #11c86f;
+  background-image: url("../../images/conditioner/category_conditioner/checkmark.svg");
+  background-size: 5px 4px;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 .hover_items:hover span {
@@ -160,4 +189,13 @@
 .hover_items:hover .container_svg path {
   transition: fill 0.5s;
   fill: red;
+}
+
+.hover_items:hover .container_svg_add path {
+  transition: fill 0.5s;
+  fill: red;
+}
+
+.add_basket {
+  background-color: red;
 }

@@ -2,7 +2,7 @@ import styles from "./MainMenu.module.css";
 import logo_img from "../../images/nav-images/main-menu/main-logo.png";
 import CatalogList from "./Catalog-list/CatalogList";
 import BasketMenu from "./Basket-menu/BasketMenu";
-import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 function MainMenu() {
@@ -26,9 +26,11 @@ function MainMenu() {
     <>
       <div className={styles.container_main_nav}>
         <div className={styles.conteiner_nav}>
+          <Link to="/">
           <div className={styles.main_logo}>
             <img src={logo_img} alt="05.ru logo" />
           </div>
+          </Link>
           <div className={styles.buttom_arrow}></div>
           <div className={styles.conteiner_catalog}>
             <div

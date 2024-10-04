@@ -2,40 +2,54 @@ import styles from "./BasketMenu.module.css";
 import EmptyBasket from "./Empty-basket/EmptyBaslet";
 import ItemBasket from "./Item-basket/ItemBasket";
 import { useState, useRef } from "react";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function BasketMenu() {
   const state = useSelector((state) => state.menuBasket.menuBasket);
   const [showBasket, setShowBasket] = useState(false);
   const [transitBasket, setTransitBasket] = useState(false);
-  const dispatch = useDispatch();
+  const [transitDelay, setTransitDelay] = useState(null);
   const refDelay = useRef();
 
   const showBasketHandler = () => {
     clearTimeout(refDelay.current);
+    clearTimeout(transitDelay);
     setShowBasket(true);
     setTransitBasket(true);
   };
 
   const hideBasketHandler = () => {
-    setTransitBasket(false);
-    refDelay.current = setTimeout(() => {
-      setShowBasket(false);
-    }, 300);
+    const delay = setTimeout(() => {
+      setTransitBasket(false);
+      refDelay.current = setTimeout(() => {
+        setShowBasket(false);
+      }, 300);
+    }, 100);
+    setTransitDelay(delay);
   };
 
-  console.log(state)
-
-  
   return (
     <>
       <div
         onMouseEnter={() => showBasketHandler()}
         onMouseLeave={() => hideBasketHandler()}
-        ref={refDelay}
-        className={styles.basket}
+        className={styles.container_basket}
       >
-        {state.length ? <ItemBasket showBasket={showBasket} transitBasket={transitBasket} /> : <EmptyBasket showBasket={showBasket} transitBasket={transitBasket} /> }
+        <Link to="/basket">
+          <div ref={refDelay} className={styles.basket}>
+            {state.length ? (
+              <div className={styles.quantity_goods}>{state.length}</div>
+            ) : (
+              ""
+            )}
+          </div>
+        </Link>
+        {state.length ? (
+          <ItemBasket showBasket={showBasket} transitBasket={transitBasket} />
+        ) : (
+          <EmptyBasket showBasket={showBasket} transitBasket={transitBasket} />
+        )}
       </div>
     </>
   );

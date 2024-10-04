@@ -1,0 +1,52 @@
+.container_empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 489px;
+}
+
+.container_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_img {
+  width: 120px;
+  height: 120px;
+  background-image: url("../../images/basket.svg");
+  background-position: center;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+.main_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 21px;
+    margin-bottom: 8px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text span {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.link_catalog {
+    color: black;
+    text-decoration: none;
+}
+
+.link_catalog:hover {
+    color: red;
+}
