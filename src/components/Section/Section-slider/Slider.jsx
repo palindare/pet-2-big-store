@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 function Slider() {
   const state = useSelector((state) => state.slides.slides);
   const [loadSlide, setLoadSlide] = useState(0);
-  const [slider, setSlider] = useState([
+  const [slider] = useState([
     state[state.length - 3],
     state[state.length - 2],
     state[state.length - 1],
@@ -13,14 +13,12 @@ function Slider() {
     state[0],
     state[1],
     state[2],
-    // state[3],
   ]);
   const [current, setCurrent] = useState(3);
   const [transit, setTransit] = useState(true);
   const [canSlide, setCanSlide] = useState(false);
   const [canSlideMove, setCanSlideMove] = useState(false);
   const [transitionOn, setTransitionOn] = useState(false);
-  const [dragSlide, setDragSlide] = useState(false);
   const [moveX, setMoveX] = useState(0);
   const [pos1, setPos1] = useState(0);
 
@@ -52,25 +50,6 @@ function Slider() {
     }
   };
 
-  const previousBtn = () => {
-    if (!dragSlide) {
-      setCanSlide(false);
-      if (current === 3) {
-        setTransit(false);
-        setCurrent(state.length + 3);
-      }
-    }
-  };
-
-  const nextBtn = () => {
-    if (!dragSlide) {
-      setCanSlide(false);
-      if (current === state.length + 3) {
-        setTransit(false);
-        setCurrent(3);
-      }
-    }
-  };
 
   const clickSlideDot = (id) => {
     setTransit(true);
@@ -99,7 +78,6 @@ function Slider() {
   const onSlideDown = (e) => {
     setCanSlideMove(true);
     setTransitionOn(false);
-    setDragSlide(true);
     setPos1(e.clientX);
   };
 
@@ -113,7 +91,6 @@ function Slider() {
     updateCurrent();
     setTransitionOn(true);
     setCanSlideMove(false);
-    setDragSlide(false);
     setMoveX(0);
   };
 
@@ -138,13 +115,11 @@ function Slider() {
         <div onMouseUp={() => onSlideUp()} className={styles.marking}>
           <div
             className={styles.next_slide_btn}
-            // onMouseEnter={() => nextBtn()}
             onMouseMove={(e) => onSlideMove(e)}
             onClick={() => nextSlide()}
           ></div>
           <div
             onClick={() => previousSlide()}
-            // onMouseEnter={() => previousBtn()}
             onMouseMove={(e) => onSlideMove(e)}
             className={styles.previous_slide_btn}
           ></div>

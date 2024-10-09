@@ -1,8 +1,7 @@
 import styles from "./SlideCategory.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import fronchise_img from "../images/slide-category/franchise.svg";
 import icon05_img from "../images/slide-category/05.ru.jpg";
-import { useInView } from "react-intersection-observer";
 import { useSelector,useDispatch } from "react-redux";
 
 

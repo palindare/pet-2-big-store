@@ -1,5 +1,5 @@
 import styles from "./SectionBasketGoods.module.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function SectionBasketGoods() {
   const state = useSelector((state) => state.menuBasket.menuBasket);

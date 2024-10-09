@@ -2,7 +2,7 @@ import styles from "./BasketMenu.module.css";
 import EmptyBasket from "./Empty-basket/EmptyBaslet";
 import ItemBasket from "./Item-basket/ItemBasket";
 import { useState, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function BasketMenu() {

@@ -19,6 +19,7 @@ function List({ currentId }) {
           data.show = 100;
           return value;
         }
+        return value; 
       })
     );
 

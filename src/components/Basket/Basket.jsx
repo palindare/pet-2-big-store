@@ -1,4 +1,3 @@
-import styles from "./Basket.module.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import SectionBasket from "./Section-Basket/SectionBasket";

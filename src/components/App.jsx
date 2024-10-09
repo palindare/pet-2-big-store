@@ -1,4 +1,3 @@
-import styles from "./App.module.css";
 import { Routes, Route } from "react-router-dom";
 import Main from "./Main"
 import Basket from "./Basket/Basket";

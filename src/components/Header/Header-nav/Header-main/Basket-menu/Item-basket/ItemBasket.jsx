@@ -43,7 +43,6 @@ function ItemBasket({ showBasket, transitBasket }) {
         }}
       >
         {state.map(({ id, name, img, price, quantity }) => {
-          if (!price) return
           let changedPrice = price.replace(" ", "");
           sum += +changedPrice;
           resultSum = new Intl.NumberFormat("Ru-ru", {
@@ -51,7 +50,7 @@ function ItemBasket({ showBasket, transitBasket }) {
             currency: "RUB",
             maximumFractionDigits: 0,
             minimumFractionDigits: 0,
-          }).format(sum);
+          }).format(sum); 
           return (
             <>
               <div className={styles.basket_container}>

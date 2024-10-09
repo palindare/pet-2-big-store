@@ -1,4 +1,3 @@
-import styles from "./Section.module.css";
 import Slider from "./Section-slider/Slider";
 import AuthInfo from "./Section-auth-info/AuthInfo";
 import Category from "./Section-category/Category";

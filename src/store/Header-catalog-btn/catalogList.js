@@ -609,7 +609,6 @@ const defaultState = {
       id: 9,
       img: require("../../components/Header/images/nav-images/main-menu/catalog-list/hair-dryer.webp"),
       name: "Красота, здоровье",
-      name: "Климатическая техника",
       brand: [
         require("../../store/Header-catalog-btn/images/Category-list/brand-icons/dyson.webp"),
         require("../../store/Header-catalog-btn/images/Category-list/brand-icons/philips.webp"),
