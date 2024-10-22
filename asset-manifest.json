@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pet-2-big-store/static/css/main.e8ccb490.css",
-    "main.js": "/pet-2-big-store/static/js/main.3c7620bf.js",
+    "main.css": "/pet-2-big-store/static/css/main.8c5620c9.css",
+    "main.js": "/pet-2-big-store/static/js/main.16a3108c.js",
     "static/media/Ubuntu-Regular.ttf": "/pet-2-big-store/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Medium.ttf": "/pet-2-big-store/static/media/Ubuntu-Medium.e37c5546eb1a6efc4818.ttf",
     "static/media/Ubuntu-Bold.ttf": "/pet-2-big-store/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
@@ -159,6 +159,7 @@
     "static/media/bluetooth.webp": "/pet-2-big-store/static/media/bluetooth.b0f641857b75d2f50d7f.webp",
     "static/media/accessories-for-climate.webp": "/pet-2-big-store/static/media/accessories-for-climate.cef02cf3ba3b1f1a9573.webp",
     "static/media/electronics-and-technology.webp": "/pet-2-big-store/static/media/electronics-and-technology.44bba5f18c794b3d4ce9.webp",
+    "static/media/trash-active.svg": "/pet-2-big-store/static/media/trash-active.50e48b9f2c6f63858f12.svg",
     "static/media/start-search-red.svg": "/pet-2-big-store/static/media/start-search-red.a109f76c29ff0c343a94.svg",
     "static/media/start-search-white.svg": "/pet-2-big-store/static/media/start-search-white.83971902eca125adc57d.svg",
     "static/media/trash.svg": "/pet-2-big-store/static/media/trash.de21a92084988029d2b9.svg",
@@ -177,24 +178,29 @@
     "static/media/location.svg": "/pet-2-big-store/static/media/location.dcf05649b3ff2e51b0d380c40e52bff9.svg",
     "static/media/white-arrow-next.svg": "/pet-2-big-store/static/media/white-arrow-next.123fd0b64b278699415d.svg",
     "static/media/checkbox.svg": "/pet-2-big-store/static/media/checkbox.aaaa851718b555e89d82.svg",
+    "static/media/favorite-active.svg": "/pet-2-big-store/static/media/favorite-active.7f8383ec6f104da5a131.svg",
     "static/media/white-arrow-previous.svg": "/pet-2-big-store/static/media/white-arrow-previous.692c38bbcee44c1a966e.svg",
     "static/media/black-arrow-next.svg": "/pet-2-big-store/static/media/black-arrow-next.f588c7faf8d18f50ec0a.svg",
     "static/media/next_btn.svg": "/pet-2-big-store/static/media/next_btn.f588c7faf8d18f50ec0a.svg",
     "static/media/black-arrow-previous.svg": "/pet-2-big-store/static/media/black-arrow-previous.fe5cbbbb451496b17623.svg",
     "static/media/previous_btn.svg": "/pet-2-big-store/static/media/previous_btn.fe5cbbbb451496b17623.svg",
+    "static/media/plus-active.svg": "/pet-2-big-store/static/media/plus-active.004b9c5e4f7b415db710.svg",
     "static/media/plus-red.svg": "/pet-2-big-store/static/media/plus-red.004b9c5e4f7b415db710.svg",
     "static/media/plus-black.svg": "/pet-2-big-store/static/media/plus-black.142fda130da40ab330dc.svg",
+    "static/media/plus.svg": "/pet-2-big-store/static/media/plus.142fda130da40ab330dc.svg",
+    "static/media/minus-active.svg": "/pet-2-big-store/static/media/minus-active.00b8be63e08266795b7e.svg",
     "static/media/minus-red.svg": "/pet-2-big-store/static/media/minus-red.00b8be63e08266795b7e.svg",
     "static/media/minus-black.svg": "/pet-2-big-store/static/media/minus-black.ff6b1472013705044651.svg",
+    "static/media/minus.svg": "/pet-2-big-store/static/media/minus.ff6b1472013705044651.svg",
     "static/media/border-left.svg": "/pet-2-big-store/static/media/border-left.e27dadae95c37abdf177.svg",
     "static/media/border-right.svg": "/pet-2-big-store/static/media/border-right.7ddf5f35fc37c56337d0.svg",
     "static/media/round.svg": "/pet-2-big-store/static/media/round.c7bae35caa7eeba5791d.svg",
     "static/media/bookmark.svg": "/pet-2-big-store/static/media/bookmark.ac032c14b9902a18e438.svg",
-    "main.e8ccb490.css.map": "/pet-2-big-store/static/css/main.e8ccb490.css.map",
-    "main.3c7620bf.js.map": "/pet-2-big-store/static/js/main.3c7620bf.js.map"
+    "main.8c5620c9.css.map": "/pet-2-big-store/static/css/main.8c5620c9.css.map",
+    "main.16a3108c.js.map": "/pet-2-big-store/static/js/main.16a3108c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8ccb490.css",
-    "static/js/main.3c7620bf.js"
+    "static/css/main.8c5620c9.css",
+    "static/js/main.16a3108c.js"
   ]
 }
