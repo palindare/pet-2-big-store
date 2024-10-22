@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pet-2-big-store/static/css/main.8c5620c9.css",
+    "main.css": "/pet-2-big-store/static/css/main.9eaadff7.css",
     "main.js": "/pet-2-big-store/static/js/main.16a3108c.js",
     "static/media/Ubuntu-Regular.ttf": "/pet-2-big-store/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Medium.ttf": "/pet-2-big-store/static/media/Ubuntu-Medium.e37c5546eb1a6efc4818.ttf",
@@ -196,11 +196,11 @@
     "static/media/border-right.svg": "/pet-2-big-store/static/media/border-right.7ddf5f35fc37c56337d0.svg",
     "static/media/round.svg": "/pet-2-big-store/static/media/round.c7bae35caa7eeba5791d.svg",
     "static/media/bookmark.svg": "/pet-2-big-store/static/media/bookmark.ac032c14b9902a18e438.svg",
-    "main.8c5620c9.css.map": "/pet-2-big-store/static/css/main.8c5620c9.css.map",
+    "main.9eaadff7.css.map": "/pet-2-big-store/static/css/main.9eaadff7.css.map",
     "main.16a3108c.js.map": "/pet-2-big-store/static/js/main.16a3108c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c5620c9.css",
+    "static/css/main.9eaadff7.css",
     "static/js/main.16a3108c.js"
   ]
 }
