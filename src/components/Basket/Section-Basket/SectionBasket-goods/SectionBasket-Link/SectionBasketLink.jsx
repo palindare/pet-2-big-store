@@ -6,9 +6,6 @@ function SectionBasketLink() {
 
     const handleChange = (e) => {
         const currentNum = e.target.value
-        if ("/^[a-z0-9_\.-]+$/".test(currentNum))
-            console.log("pp")
-        setPeopleNum(rusNum)
     }
   return (
     <div className={styles.marking}>
